@@ -9,15 +9,15 @@ router.get('/', function (ctx, next) {
     "code": 200,
     "message": "",
     "data": [{
-      "sn": "在线",
+      "sn": "在线1",
       "ip": 123,
       "info": "CPU故障"
     }, {
-      "sn": "在线",
+      "sn": "在线1",
       "ip": 123,
       "info": "CPU故障"
     }, {
-      "sn": "在线",
+      "sn": "在线1",
       "ip": 123,
       "info": "CPU故障"
     }, {
