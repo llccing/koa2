@@ -3,47 +3,6 @@ const router = require('koa-router')()
 router.prefix('/users')
 
 router.get('/', function (ctx, next) {
-  console.log(ctx);
-  console.log(next);
-  var obj = {
-    "code": 200,
-    "message": "",
-    "data": [{
-      "sn": "在线1",
-      "ip": 123,
-      "info": "CPU故障"
-    }, {
-      "sn": "在线1",
-      "ip": 123,
-      "info": "CPU故障"
-    }, {
-      "sn": "在线1",
-      "ip": 123,
-      "info": "CPU故障"
-    }, {
-      "sn": "在线",
-      "ip": 123,
-      "info": "CPU故障"
-    }, {
-      "sn": "在线",
-      "ip": 123,
-      "info": "CPU故障"
-    }, {
-      "sn": "在线",
-      "ip": 123,
-      "info": "CPU故障"
-    }]
-  };
-
-  ctx.body = obj;
-})
-
-router.get('/bar', function (ctx, next) {
-  ctx.body = 'this is a users/bar response'
-
-})
-
-router.get('/list', function (ctx, next) {
   let data = [];
 
   console.log(ctx.query)
@@ -58,9 +17,14 @@ router.get('/list', function (ctx, next) {
 
   ctx.body = {
     data: data,
-    currentPage:currentPage,
-    totalPages: 100,
+    currentPage: currentPage,
+    total: 123,
   }
+
+})
+
+router.get('/bar', function (ctx, next) {
+  ctx.body = 'this is a users/bar response'
 
 })
 
